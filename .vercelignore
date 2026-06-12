@@ -1,0 +1,13 @@
+dist/
+build/
+exiftool/
+logs/
+*.log
+__pycache__/
+*.pyc
+*.pyo
+*.spec
+config/config.ini.bak
+.venv/
+venv/
+*.egg-info/
