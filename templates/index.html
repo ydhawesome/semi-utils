@@ -563,13 +563,10 @@
     };
 
     function detectLang() {
+        // Default language is always English. Only an explicit user choice (saved
+        // in localStorage) overrides it — we do NOT auto-follow the browser locale.
         const saved = localStorage.getItem('lang');
         if (saved && I18N[saved]) return saved;
-        const n = (navigator.language || 'en').toLowerCase();
-        if (n.startsWith('zh')) return 'zh';
-        if (n.startsWith('ja')) return 'ja';
-        if (n.startsWith('ko')) return 'ko';
-        if (n.startsWith('es')) return 'es';
         return 'en';
     }
 
